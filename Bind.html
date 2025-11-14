@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Clicked</button>
+</body>
+
+<script>
+    // here we see the bind keyword is use to bind the data of which we are passing the data 
+    // suppose we dont pass the bind the data we will get value as undefined beacuse the data we arepassing is not 
+    // getting pass over there
+    // It is an old technique of the data passing to this so that it get the value we are passing
+    class React{
+        constructor(){
+            this.Library = "React";
+            this.url = "localhost://3000" 
+            document.querySelector('button').addEventListener('click', this.handleClick.bind(this))  
+        }
+
+        handleClick(){
+            console.log("Button Clicked");
+            console.log(this.url);
+        }
+    }
+    new React();
+</script>
+</html>

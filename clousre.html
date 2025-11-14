@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+
+</body>
+<script>
+        // closure are those which return the 
+
+
+    // here we use the clousre concept where the fucntion return anothere function with the lexical scope of the outer function 
+        function clickhandler(color){
+            // document.body.style.backgroundColor = `${color}`; // It will directly execute the color set property to the 
+            return function(){                                    // handler 
+                document.body.style.backgroundColor = `${color}`; 
+            }
+        }
+
+        document.getElementById('orange').onclick = clickhandler("orange"); 
+        document.getElementById('green').onclick = clickhandler("green"); 
+
+</script>
+</html>
